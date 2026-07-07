@@ -16,6 +16,11 @@ def ingest_data_to_db(data_records):
 
     # Create target schema matching your JSON fields
     # (Included 'userId' to capture the complete JSONPlaceholder schema)
+    # Fetches the database file name from environment variables if "DB_NAME" is set;
+    # otherwise, defaults to using "practice_warehouse.db".
+    # This allows flexible configuration: 
+    # - In production, set DB_NAME via the .env file to determine which database is targeted.
+    # - For local/dev use (when .env might not be configured), it uses a safe default.
     db_name = os.environ.get("DB_NAME", "practice_warehouse.db")
     connection = None
     
