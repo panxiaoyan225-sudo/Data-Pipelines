@@ -64,6 +64,7 @@ def run_titanic_pipeline():
             f"❌ failed - Titanic pipeline failed ({error_type}): {e}"
         )
 
-
+# The following conditional ensures that the code block below it 
+# only runs when this script is executed directly (not imported as a module).
 if __name__ == "__main__":
     run_titanic_pipeline()

@@ -20,7 +20,11 @@ def run_duplicate_check(engine, table, id_column):
 
         if id_column not in df.columns:
             print(f"❌ ERROR: {id_column} does not exist in table {table}.")
+            # Yes, 'return' will exit the current function ('run_duplicate_check') at this point.
+            # It stops further execution within this function, but does NOT terminate the whole program or script.
+            # Any code after the function call in the caller (e.g., in main or elsewhere) will continue.
             return
+ 
         # multi_duplicate_mask = df.duplicated(subset=['payment_id', 'amount'], keep=False)
         # Identifying 100% identical clones
         # Since subset is NOT used, it checks every column automatically
@@ -28,6 +32,10 @@ def run_duplicate_check(engine, table, id_column):
       
         #duplicate_clones = df[df.duplicated(keep=False)]
 
+        # The expression df[duplicate_mask] creates a new DataFrame containing only the rows
+        # where the 'duplicate_mask' is True (i.e., rows identified as duplicates).
+        # It's a common Pandas idiom: df[mask] filters the DataFrame using a Boolean mask.
+        # After filtering, sort_values orders the duplicate records by the specified 'id_column'.
         wrong_records = df[duplicate_mask].sort_values(by=id_column)
         
         # Check if the DataFrame 'wrong_records' is not empty,
