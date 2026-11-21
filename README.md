@@ -1,4 +1,4 @@
-# Data Pipelines: Reliable Ingestion, Validation, and Automation
+## Data Pipelines: Reliable Ingestion, Validation, and Automation
 
 This repository demonstrates practical data-engineering patterns for moving information from source systems into structured, usable datasets.
 
