@@ -4,7 +4,7 @@ This repository demonstrates practical data-engineering patterns for moving info
 
 It brings together **API ingestion, SQL processing, data-quality validation, database connectivity, monitoring, and workflow automation**. The emphasis is on building dependable data workflows with appropriate tools—not adding infrastructure for its own sake.
 
-[**View the Data Pipeline Infographic**](https://panxiaoyan225-sudo.github.io/data-pipelines/data_infographic.html)
+[**View the Data Pipeline Infographic**](https://panxiaoyan225-sudo.github.io/Data-Pipelines/data_infographic.html)
 
 ## Why this work matters
 

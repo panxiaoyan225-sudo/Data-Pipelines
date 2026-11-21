@@ -28,7 +28,9 @@ env.*
 
 requirements.txt
 
-sakila/
+sakila
 
 tempCodeRunnerFile.bat
 README copy.md
+
+pipeline_py/
