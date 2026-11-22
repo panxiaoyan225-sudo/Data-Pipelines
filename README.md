@@ -31,6 +31,7 @@ A custom validation module (`data_validator.py`) is used to enforce data-quality
 ## Orchestration patterns
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '12px', 'fontFamily': 'Segoe UI, sans-serif', 'primaryColor': '#fff', 'secondaryColor': '#fff', 'tertiaryColor': '#fff'}}}%%
 flowchart LR
     subgraph Legacy["Legacy"]
         direction TB
@@ -51,6 +52,13 @@ flowchart LR
     end
 
     Legacy --> Enterprise --> Modern
+
+    classDef empty fill:none,stroke:none,stroke-width:0
+    classDef node fill:none,stroke:#333,stroke-width:1px,font-size:11px
+    class L1,L2,E1,E2,M1,M2 node
+    class Legacy,Enterprise,Modern empty
+
+
 ```
 
 
