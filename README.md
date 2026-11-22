@@ -48,7 +48,7 @@ flowchart LR
     subgraph Modern["Modern"]
         direction TB
         M1["GitHub Actions"]
-        M2["Self‑Hosted Windows Service"]
+        M2["Self‑Hosted Runner"]
     end
 
     Legacy --> Enterprise --> Modern
