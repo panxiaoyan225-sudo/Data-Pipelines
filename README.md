@@ -30,6 +30,30 @@ A custom validation module (`data_validator.py`) is used to enforce data-quality
 
 ## Orchestration patterns
 
+```mermaid
+flowchart LR
+    subgraph Legacy["Legacy"]
+        direction TB
+        L1["Task Scheduler"]
+        L2["Local Batches"]
+    end
+
+    subgraph Enterprise["Enterprise"]
+        direction TB
+        E1["Azure DevOps"]
+        E2["Variable Group Secrets"]
+    end
+
+    subgraph Modern["Modern"]
+        direction TB
+        M1["GitHub Actions"]
+        M2["Self‑Hosted Windows Service"]
+    end
+
+    Legacy --> Enterprise --> Modern
+```
+
+
 ### 1. Local automation: Windows Task Scheduler
 
 A master `run_all_pipelines.bat` script coordinates local execution. This approach is useful for lightweight workflows where native scheduling is sufficient.
